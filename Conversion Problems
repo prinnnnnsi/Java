@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ConversionProblems {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double inches, centimeters, kilograms, grams, cups, ounces;
+
+        System.out.print("Enter your inches: ");
+        inches = input.nextDouble();
+
+        System.out.print("Enter your kilograms: ");
+        kilograms = input.nextDouble();
+
+        System.out.print("Enter your cups: ");
+        cups = input.nextDouble();
+
+        centimeters = inches * 2.54;
+        grams = kilograms * 1000;
+        ounces = cups * 6; 
+
+        System.out.println(inches + " inches is equivalent to: " + centimeters + " centimeters.");
+        System.out.println(kilograms + " kilograms is equivalent to: " + grams + " grams.");
+        System.out.println(cups + " cups is equivalent to: " + ounces + " ounces.");
+
+        input.close();
+    }
+}
