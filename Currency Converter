@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class CurrencyConverter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double usdToPhp = 56.59843; 
+        double phpToUsd = 1 / usdToPhp;
+        double cadToPhp = 41.591719;     
+        double phpToCad = 1 / cadToPhp; 
+       
+        System.out.print("Enter amount in US dollars: ");
+        double usdAmount = input.nextDouble();
+       
+        double phpAmount = usdAmount * usdToPhp;
+        System.out.println("Equivalent in Philippine pesos is: " + phpAmount);
+
+        System.out.print("Enter amount in Philippine pesos: ");
+        double phpAmount2 = input.nextDouble();
+
+        double cadAmount = phpAmount2 * phpToCad;
+        System.out.println("Equivalent in Canadian dollars is: " + cadAmount);
+
+        input.close();
+    }
+} 
